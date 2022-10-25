@@ -5,11 +5,4 @@ Adipisci doloribus veritatis quibusdam quam,<br> recusandae eius maiores asperio
  ex distinctio ducimus, ab facilis commodi? Cumque fuga facere fugiat?</p>
 </div>
 
-<div class="button-options">
-  <div class="button-child"> <p>Already a member?</p>
-    <%= link_to "Log in", new_user_session_path, class: "btn btn-primary" %>
-  </div>
-    <div class="button-child"><p>New to sweet paw?</p>
-    <%= link_to "sign up here", new_user_registration_path, class: "btn btn-primary" %>
-  </div>
-</div>
+<%= render 'components/cards' %>
