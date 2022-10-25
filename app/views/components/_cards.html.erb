@@ -1,0 +1,22 @@
+<h1>Hello from cards... testing first commit</h1>
+
+<h2 class='section-headline'>Check out our Pets:</h2>
+
+<div class="cards-container-homepage">
+
+  <div class="cards-home">
+
+    <% @pets.each do |pet| %>
+      <div class="card-product">
+        <%= cl_image_tag pet.photo.key %>
+        <div class="card-product-infos">
+          <div>
+            <h2><%= pet.name %></h2>
+            <p><%= pet.description[0,55] + "..." %></p>
+          </div>
+          <h2 class="card-product-pricing"><%= pet.age.to_s + "years old" %></h2>
+        </div>
+      </div>
+    <% end %>
+
+<!--  in order to use the cards we need <%= render 'components/cards'  %> in home.html.erb -->
