@@ -1,0 +1,20 @@
+//Section headline
+.section-headline {
+  display: flex;
+  height: fit-content;
+  color: $white;
+  justify-content: center;
+  font-weight: lighter;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background: #225820;
+  background: radial-gradient(circle, rgb(33, 123, 81) 0%, rgb(27, 87, 69) 100%);
+}
+
+/* MQ */
+@media screen and (max-width: 600px) {
+  .cards-home {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
