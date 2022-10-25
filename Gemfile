@@ -31,6 +31,8 @@ gem "jbuilder"
 # Faker
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
 
+gem "dotenv-rails", groups: [:development, :test]
+gem "cloudinary"
 # gem for authentication
 gem "devise"
 # Simple form added
