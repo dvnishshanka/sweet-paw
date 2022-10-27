@@ -68,17 +68,15 @@
   margin: 0 20px;
 }
 
-
-
 .card-product {
   img {
   height: 200px;
   width: 200px !important;
 
-}
+  }
 }
 
-.capybara-link {
+.pet-link {
   text-decoration: none;
 }
 
@@ -116,6 +114,18 @@ margin-top: 24px;
     height: 300px;
     width: 300px !important;
   }
+}
+
+// btn-cards-create-new-pet
+.btn-create-new {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  padding: 20px;
+  color:#225820;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+  border-radius: 3.2px;
 }
 
 
