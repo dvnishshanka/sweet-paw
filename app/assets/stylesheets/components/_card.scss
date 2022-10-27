@@ -68,9 +68,14 @@
   margin: 0 20px;
 }
 
-.card-product-image {
-  color: #282828;
-  text-decoration: none;
+
+
+.card-product {
+  img {
+  height: 200px;
+  width: 200px !important;
+
+}
 }
 
 .capybara-link {
@@ -104,6 +109,13 @@ margin-top: 24px;
   flex-wrap: wrap;
   flex-grow: 1;
   margin: 0 20px;
+}
+
+.new-wrapper {
+  img {
+    height: 300px;
+    width: 300px !important;
+  }
 }
 
 
