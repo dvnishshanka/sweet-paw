@@ -25,7 +25,7 @@
     <h3>Postcode: <%= @pet.postcode %></h3>
     <h3>Species: <%= @pet.species.capitalize %></h3>
     <h3>Age: <%= @pet.age %></h3>
-    <h3>A little information about <%= @pet.name %> </h3><br><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+    <h3>A little information about <%= @pet.name %> </h3><br><%= @pet.description %><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
   </div>
   <%= link_to "Return to home", root_path, class: "btn-sign-up" %>
   <%= link_to "Book this Pet", new_pet_booking_path(@pet), class: "btn-sign-up" %>
