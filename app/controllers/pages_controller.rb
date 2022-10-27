@@ -4,5 +4,15 @@ class PagesController < ApplicationController
     @pets = Pet.all.first(4)
   end
 
+  def dashboard
+    @user= current_user
+    current_user_pets
+  end
+
+  private
+
+  def current_user_pets
+    @my_pets = Pet.where(species: 'dog').all
+  end
 
 end

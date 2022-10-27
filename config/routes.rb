@@ -9,4 +9,8 @@ Rails.application.routes.draw do
     resources :bookings, only: [:create, :new, :index]
   end
   resources :bookings, only: :destroy
+
+  # Bookings of current User
+  # Pets of current user
+  get "dashboard/:id", to: "pages#dashboard", as: :dashboard
 end
