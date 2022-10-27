@@ -5,14 +5,17 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @user= current_user
     current_user_pets
   end
 
   private
 
   def current_user_pets
-    @my_pets = Pet.where(species: 'dog').all
+    @pets = Pet.where(user_id: current_user).all
+  end
+
+  def current_user_pets
+    @bookings = Booking.where(user_id: current_user).all
   end
 
 end
