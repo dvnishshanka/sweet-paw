@@ -4,10 +4,6 @@
 <h2>My Bookings</h2>
 
 <h2>My Pets</h2>
-<% @my_pets.each do |pet| %>
-<li><%= pet.name %></li>
-<li><%= pet.species %></li>
-
-<% end %>
+<%= render 'shared/cards' %>
 
 </div>
