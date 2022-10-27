@@ -1,8 +1,13 @@
+$pink: #F73D93;
+$blue: #150050;
+$dark_grey: #413F42;
+$grey: #7F8487;
+
 .navbar-sweet-paw {
   justify-content: space-between;
-height: 30px;
 padding-top: 3px;
 margin-top: 0px;
+background-color: $pink;
 }
 
 .navbar-sweet-paw .navbar-collapse {

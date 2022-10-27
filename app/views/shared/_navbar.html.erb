@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-sweet-paw mt-0">
+<div class="navbar navbar-expand-sm  navbar-sweet-paw mt-0">
   <div class="container-fluid ">
     <%= link_to root_path, class: "navbar-brand" do %>
     <div class="d-flex flex-row align-items-center justify-content-center">
@@ -18,7 +18,7 @@
             <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to  "Book a pet", class: "nav-link" %>
+            <%= link_to  "Book a pet",pets_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to  "All Pets", pets_path, class: "nav-link" %>
@@ -39,7 +39,7 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <%= link_to "Login", new_user_session_path, class: "nav-link btn-sign-up pl-50" %>
           </li>
         <% end %>
       </ul>
