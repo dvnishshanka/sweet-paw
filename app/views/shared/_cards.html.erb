@@ -1,16 +1,24 @@
 <div class="cards-container-homepage">
-  <h2 class='section-headline'>Check out our Pets:</h2>
 
+
+<h2 class='section-headline'>Check out our Pets:</h2>
   <div class="cards-home">
+
+
 
     <% @pets.each do |pet| %>
       <div class="card-product">
         <div class="card-product-infos">
           <div>
+          <%= image_tag("monkey.png")%>
             <h3><%= pet.name %></h3>
+            <h5><%= pet.species.capitalize %></h5>
+            <h5>age: <%= pet.age %></h5>
+            <%= link_to 'Learn More', pet_path(pet), class:"mb-3" %>
           </div>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+<%= link_to "Create a new pet", new_pet_path, class: " btn-sign-up" %>
