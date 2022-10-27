@@ -1,3 +1,8 @@
- <% @pets.each do |pet| %>
+ <div class="container">
+ <%= link_to "Create", new_pet_path, class: " btn-sign-up pl-50" %>
+   <% @pets.each do |pet| %>
 <li><%= pet.name %></li>
  <% end %>
+
+
+ </div>
