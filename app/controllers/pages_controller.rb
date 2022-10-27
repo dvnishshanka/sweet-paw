@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
   def dashboard
     current_user_pets
+    current_user_bookings
   end
 
   private
@@ -14,7 +15,7 @@ class PagesController < ApplicationController
     @pets = Pet.where(user_id: current_user).all
   end
 
-  def current_user_pets
+  def current_user_bookings
     @bookings = Booking.where(user_id: current_user).all
   end
 
