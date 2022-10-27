@@ -10,22 +10,7 @@
       <div class="card-product">
         <div class="card-product-infos">
           <div>
-          <% if pet.species == "dog" %>
-        <%= image_tag("dog.png")%>
-
-        <% elsif pet.species == "monkey" %>
-         <%= image_tag("monkey.png")%>
-
-         <% elsif pet.species == "cat" %>
-         <%= image_tag("cat.png")%>
-
-         <% elsif pet.species == "piglet" %>
-         <%= image_tag("piglet.png")%>
-
-         <% elsif pet.species == "rabbit" %>
-         <%= image_tag("rabbit.png")%>
-
-      <% end %>
+          <%= image_tag("monkey.png")%>
             <h3><%= pet.name %></h3>
             <h5><%= pet.species.capitalize %></h5>
             <h5>age: <%= pet.age %></h5>
