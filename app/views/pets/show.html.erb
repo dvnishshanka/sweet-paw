@@ -21,6 +21,7 @@
       <% end %>
   </div>
 </div>
+<div class="container">
   <div class="row mt-4">
     <h3>Postcode: <%= @pet.postcode %></h3>
     <h3>Species: <%= @pet.species.capitalize %></h3>
@@ -29,4 +30,6 @@
   </div>
   <%= link_to "Return to home", root_path, class: "btn-sign-up" %>
   <%= link_to "Book this Pet", new_pet_booking_path(@pet), class: "btn-sign-up" %>
+</div>
+
 </div>
