@@ -43,7 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_25_211844) do
   end
 
   create_table "bookings", force: :cascade do |t|
-    t.date "date"
+    t.teda "date"
     t.bigint "user_id", null: false
     t.bigint "pet_id", null: false
     t.datetime "created_at", null: false

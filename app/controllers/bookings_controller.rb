@@ -1,10 +1,13 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [ :show ]
-  before_action :set_pet, only: [ :new, :create ]
+  before_action :set_booking, only: [:show]
+  before_action :set_pet, only: [:new, :create]
 
 
   def index
     @bookings = current_user.bookings
+  end
+
+  def show
   end
 
   def new
@@ -16,13 +19,13 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.pet = Pet.find(params[:pet_id])
     @booking.save
-    redirect_to dashboard_path(current_user)
+    redirect_to booking_path(@booking[:pet_id])
   end
 
   private
 
   def booking_params
-    params[:booking].permit(:start_date, :end_date)
+    params[:booking].permit(:date)
   end
 
   def set_booking
@@ -32,5 +35,4 @@ class BookingsController < ApplicationController
   def set_pet
     @pet = Pet.find(params[:pet_id])
   end
-
 end
