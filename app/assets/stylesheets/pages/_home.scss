@@ -37,7 +37,11 @@ border-color:#e2b46f;
   margin-left: 20px;
 }
 
-.text-container {
-margin-left: 20px;
-margin-top: 40px;
+.container-text-home {
+  align-items: center;
+  justify-content: center;
+  h1 {
+    letter-spacing: .2rem;
+  }
+  margin: 2.5rem;
 }

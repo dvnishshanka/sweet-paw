@@ -123,9 +123,23 @@ margin-top: 24px;
   justify-content: space-between;
   text-decoration: none;
   padding: 20px;
-  color:#225820;
+  background-color: #225820;
+  color:#ddd;
   box-shadow: 0 0 12px rgba(0,0,0,0.2);
   border-radius: 3.2px;
+  margin-bottom: 1rem;
+
+}
+
+.container-btn-create {
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-create-new:hover {
+  background-color: #195317;
+  text-decoration: underline;
+  color: #ddd;
 }
 
 
@@ -137,6 +151,7 @@ margin-top: 24px;
   justify-content: center;
   font-weight: lighter;
   padding: 0.5rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   background: #225820;
   background: radial-gradient(circle, rgb(33, 123, 81) 0%, rgb(27, 87, 69) 100%);
