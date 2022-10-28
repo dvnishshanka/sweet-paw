@@ -1,0 +1,9 @@
+<div class="container mt-3">
+<div class="form-control">
+        <h3>Would you like to make a date with <%= @pet.name %> ?</h3>
+        <%= simple_form_for [@pet, @booking] do |f| %>
+          <%= f.input :date, placeholder: 'date?' %>
+          <%= f.submit class: "btn btn-primary" %>
+        <% end %>
+        </div>
+      </div>
