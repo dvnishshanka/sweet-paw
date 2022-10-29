@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.pet = Pet.find(params[:pet_id])
     @booking.save
-    redirect_to pet_bookings_path(booking)
+    redirect_to dashboard_path(current_user)
   end
 
   private

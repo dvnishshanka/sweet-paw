@@ -8,7 +8,9 @@
 
 
 puts "Cleaning the database 🧹"
+Booking.destroy_all
 Pet.destroy_all
+
 puts "Here are some new sweet-pets"
 
 users = User.pluck(:id)
