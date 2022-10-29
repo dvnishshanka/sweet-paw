@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  margin-top: 25px;
   border-radius: 30px;
 }
 
@@ -42,4 +43,35 @@
 .card-product .card-product-infos {
   padding-left: 16px;
   margin-left: 0;
+}
+
+.btn-create-new {
+  background: #1D6349;
+  margin: 12px;
+  color: #ddd;
+  padding: 12px;
+  border-radius: 5px;
+  box-shadow: 5 5 15px rgba(0,0,0,0.2);
+}
+
+.container-btn-create {
+  padding: 22px;
+  margin-left: 687px;
+}
+
+.btn-create-new:hover {
+  color: #282828;
+  border-radius: 20px;
+}
+
+.btn-lern-more {
+  color: #ddd;
+  background-color: #1D6349;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.btn-lern-more:hover {
+  color: #282828;
+  border-radius: 1px;
 }
