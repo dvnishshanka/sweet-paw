@@ -21,8 +21,8 @@ class PetsController < ApplicationController
       {
         lat: pet.latitude,
         lng: pet.longitude,
-        info_window: render_to_string(partial: "info_window", locals: {pet: pet}),
-        image_url: helpers.asset_url("../assets/images/monkey.png")
+        info_window: render_to_string(partial: "shared/info_window", locals: {pet: pet}),
+        image_url: helpers.asset_url("dog.png")
       }
     end
   end

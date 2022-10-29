@@ -9,22 +9,22 @@
       <div class="card-product-infos">
         <div>
 
-          <% if pet.photo.key%>
-              <%= cl_image_tag @pet.photo.key, height: 300, width: 400, crop: :fill %>
+          <% if booking.pet.photo.key%>
+              <%= cl_image_tag booking.pet.photo.key, height: 300, width: 400, crop: :fill %>
             <% else %>
-              <% if @pet.species == "dog" %>
+              <% if booking.pet.species == "dog" %>
                   <%= image_tag("dog.png")%>
 
-              <% elsif @pet.species == "monkey" %>
+              <% elsif booking.pet.species == "monkey" %>
               <%= image_tag("monkey.png")%>
 
-              <% elsif @pet.species == "cat" %>
+              <% elsif booking.pet.species == "cat" %>
               <%= image_tag("cat.png")%>
 
-              <% elsif @pet.species == "piglet" %>
+              <% elsif booking.pet.species == "piglet" %>
               <%= image_tag("piglet.png")%>
 
-              <% elsif @pet.species == "rabbit" %>
+              <% elsif booking.pet.species == "rabbit" %>
               <%= image_tag("rabbit.png")%>
       <% end %>
       <% end %>
