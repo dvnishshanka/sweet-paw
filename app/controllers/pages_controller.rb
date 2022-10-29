@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
   def home
     @pets = Pet.all.sample(3)
+    @booking = Booking.all
   end
 
   def dashboard
@@ -18,5 +19,4 @@ class PagesController < ApplicationController
   def current_user_bookings
     @bookings = Booking.where(user_id: current_user).all
   end
-
 end
