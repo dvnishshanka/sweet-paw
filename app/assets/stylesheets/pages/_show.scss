@@ -1,0 +1,24 @@
+.card-product {
+  overflow: hidden;
+  height: 220px;
+  width:400px;
+  background: white;
+  box-shadow: 5 5 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 25px;
+  border-radius: 30px;
+}
+
+.card-product img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-image {
+  height: 100%;
+  width: 60%;
+  object-fit: cover;
+}
