@@ -1,6 +1,7 @@
 class PetsController < ApplicationController
   skip_before_action :authenticate_user!
-  before_action :set_pet, only: %i[ show]
+  before_action :set_pet, only: %i[show]
+
 
   def new
     @pet = Pet.new
@@ -16,6 +17,13 @@ class PetsController < ApplicationController
 
   def index
     @pets = Pet.all
+    # only Pets with coordinates
+    @markers = @pets.geocoded.map do |pet|
+      {
+        lat: pet.latitude,
+        lng: pet.longitude
+      }
+    end
   end
 
   def show
