@@ -3,27 +3,31 @@
 <div class="row mt-5">
   <div class="new-wrapper">
     <h1 style="text-align:center">Allow me to introduce you to <%= @pet.name %></h1>
-      <% if @pet.species == "dog" %>
-        <%= image_tag("dog.png")%>
+       <% if @pet.photo.key%>
+              <%= cl_image_tag @pet.photo.key, height: 300, width: 400, crop: :fill %>
+            <% else %>
+              <% if @pet.species == "dog" %>
+                  <%= image_tag("dog.png")%>
 
-        <% elsif @pet.species == "monkey" %>
-         <%= image_tag("monkey.png")%>
+              <% elsif @pet.species == "monkey" %>
+              <%= image_tag("monkey.png")%>
 
-         <% elsif @pet.species == "cat" %>
-         <%= image_tag("cat.png")%>
+              <% elsif @pet.species == "cat" %>
+              <%= image_tag("cat.png")%>
 
-         <% elsif @pet.species == "piglet" %>
-         <%= image_tag("piglet.png")%>
+              <% elsif @pet.species == "piglet" %>
+              <%= image_tag("piglet.png")%>
 
-         <% elsif @pet.species == "rabbit" %>
-         <%= image_tag("rabbit.png")%>
-
+              <% elsif @pet.species == "rabbit" %>
+              <%= image_tag("rabbit.png")%>
       <% end %>
+      <% end %>
+
   </div>
 </div>
 <div class="container">
   <div class="row mt-4">
-    <h3>Postcode: <%= @pet.postcode %></h3>
+    <h3>Address: <%= @pet.address %></h3>
     <h3>Species: <%= @pet.species.capitalize %></h3>
     <h3>Age: <%= @pet.age %></h3>
     <h3>Owner: <%= @pet.user.first_name %></h3>
