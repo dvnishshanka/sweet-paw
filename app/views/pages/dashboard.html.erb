@@ -1,19 +1,27 @@
-<div class="container">
-  <h1>Dashboard Page</h1>
-<h2>Welcome back <%= current_user.first_name %></h2>
+<div class="cards-container-dashboard">
+
+    <div class="cards-dashboard">
+<h1>Welcome back <%= current_user.first_name %></h1>
 <h2>My Bookings</h2>
 
+<% @bookings.each do |booking| %>
+    <div class="card-product">
+      <div class="card-product-infos">
+        <div>
+
+        <h3>You have booked a date with <%= booking.pet.name %> on <strong><%= booking.date %></strong></h3>
+        <h3> Address: <%= booking.pet.postcode %></h3>
+        <h3>onwer: <%= booking.pet.user.first_name %></h3>
+        <%= link_to "Message", root_path, class: "btn btn-primary" %>
+
+        <%= image_tag("dog.png")%>
+
+        </div>
+        </div>
+</div>
+<% end %>
 
 
-
-<strong>Date: <%= @bookings.first.date %></strong>
-<h3>Postcode: <%= @bookings.first.pet.name %></h3>
-
-<h3>Postcode: <%= @bookings.first.pet.postcode %></h3>
-    <h3>Species: <%= @bookings.first.pet.species.capitalize %></h3>
-    <h3>Age: <%= @bookings.first.pet.age %></h3>
-
-
-<h2>My Pets</h2>
+</div>
 
 </div>
