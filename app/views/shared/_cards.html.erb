@@ -33,9 +33,11 @@
             <p class="info-name"><%= pet.name %></p>
             <p><%= pet.species.capitalize %></p>
              <p>Personality: <%= pet.category.capitalize %></p>
+
             <p>Age: <%= pet.age %></p>
             <p>Owner: <%= pet.user.first_name || pet.user.email %></p>
             <p><%= link_to 'Learn More', pet_path(pet), class:"mb-3" %></p>
+
           </div>
 
         </div>
@@ -48,4 +50,4 @@
     <div class="box">
       <%= link_to "Create a new pet", new_pet_path, class: "btn-create-new" %>
     </div>
-    </div>
+  </div>
