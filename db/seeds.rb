@@ -22,7 +22,6 @@ users = User.pluck(:id)
     species: ["dog", "cat", "piglet", "monkey", "rabbit"].sample,
     age: ["1", "2", "3", "4", "9", "12", "16"].sample,
     category: ["Sassy", "Funny", "Needy", "Mischievous"].sample,
-    postcode: Faker::Address.postcode,
     description: "lovely pet, very friendly",
     user_id: users.sample
   )
