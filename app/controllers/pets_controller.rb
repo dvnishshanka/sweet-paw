@@ -16,6 +16,13 @@ class PetsController < ApplicationController
 
   def index
     @pets = Pet.all
+    # only Pets with coordinates
+    @markers = @pets.geocoded.map do |pet|
+      {
+        lat: pet.latitude,
+        lng: pet.longitude
+      }
+    end
   end
 
   def show
