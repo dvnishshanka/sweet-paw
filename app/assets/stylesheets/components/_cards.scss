@@ -11,6 +11,12 @@
   background: radial-gradient(circle, rgb(33, 123, 81) 0%, rgb(27, 87, 69) 100%);
 }
 
+.cards {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
 /* MQ */
 @media screen and (max-width: 600px) {
   .cards-home {
