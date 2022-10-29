@@ -24,9 +24,13 @@ users = User.pluck(:id)
     city: "Berlin",
     species: ["dog", "cat", "piglet", "monkey", "rabbit"].sample,
     age: ["1", "2", "3", "4", "9", "12", "16"].sample,
-    category: ["Sassy", "Funny", "Needy", "Mischievous"].sample,
-    address: Faker::Address.street_address,
-    description: "lovely pet, very friendly",
+    category: ["Sassy", "Innocent", "Funny", "Mischievous", "Grumpy", "Needy", "Mischievous"].sample,
+    address: ["Rudi-Dutschke-Straße 26, 10969", "Danziger Str. 33, 10435",
+       "Prinzenstraße 113-119, 10969", "Spandauer Damm 10-22, 14059",
+       "Gleimstraße 55, 10437", "Kottbusser Damm 32, 10967", "Maybachufer 20, 12047",
+      "Dunckerstraße 80A, 10437", "Sophienstraße 21, 10178", "Warschauer Str. 74, 10243"].sample,
+    description: "lovely pet, very friendly loves to be outside
+    needs alot of treats, very comfortable around people but maybe avoid small children",
     user_id: users.sample
   )
 end
