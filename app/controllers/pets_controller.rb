@@ -21,7 +21,9 @@ class PetsController < ApplicationController
     @markers = @pets.geocoded.map do |pet|
       {
         lat: pet.latitude,
-        lng: pet.longitude
+        lng: pet.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {pets: pet}),
+        image_url: helpers.asset_url("../assets/images/monkey.png")
       }
     end
   end
