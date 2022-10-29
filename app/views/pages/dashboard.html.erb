@@ -9,12 +9,32 @@
       <div class="card-product-infos">
         <div>
 
+          <% if booking.pet.photo.key%>
+              <%= cl_image_tag booking.pet.photo.key, height: 300, width: 400, crop: :fill %>
+            <% else %>
+              <% if booking.pet.species == "dog" %>
+                  <%= image_tag("dog.png")%>
+
+              <% elsif booking.pet.species == "monkey" %>
+              <%= image_tag("monkey.png")%>
+
+              <% elsif booking.pet.species == "cat" %>
+              <%= image_tag("cat.png")%>
+
+              <% elsif booking.pet.species == "piglet" %>
+              <%= image_tag("piglet.png")%>
+
+              <% elsif booking.pet.species == "rabbit" %>
+              <%= image_tag("rabbit.png")%>
+      <% end %>
+      <% end %>
+
         <h3>You have booked a date with <%= booking.pet.name %> on <strong><%= booking.date %></strong></h3>
         <h3> Address: <%= booking.pet.address %></h3>
         <h3>onwer: <%= booking.pet.user.first_name %></h3>
         <%= link_to "Message", root_path, class: "btn btn-primary" %>
 
-        <%=  <%= cl_image_tag booking.pet.photo.key, height: 300, width: 400, crop: :fill %>%>
+
 
         </div>
         </div>
