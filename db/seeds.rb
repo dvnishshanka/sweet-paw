@@ -9,9 +9,13 @@
 puts "Cleaning the database 🧹"
 Booking.destroy_all
 Pet.destroy_all
+User.destroy_all
 
 puts "Here are some new sweet-pets"
 
+User.create(email: "sara@gmail.com", password: "123456")
+User.create(email: "andy@gmail.com", password: "123456")
+User.create(email: "vidu@gmail.com", password: "123456")
 users = User.pluck(:id)
 
 20.times do
