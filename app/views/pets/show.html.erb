@@ -6,20 +6,28 @@
        <% if @pet.photo.key%>
               <%= cl_image_tag @pet.photo.key, height: 300, width: 400, crop: :fill %>
             <% else %>
-              <% if @pet.species == "dog" %>
-                  <%= image_tag("dog.png")%>
+              <div class="card-product">
+                <div class="card-image">
+                    <div class="card-product img">
+                      <% if @pet.species == "dog" %>
+                      <%= image_tag ("dog.png")%>
+                    </div>
 
-              <% elsif @pet.species == "monkey" %>
-              <%= image_tag("monkey.png")%>
+                  <% elsif @pet.species == "monkey" %>
+                  <%= image_tag("monkey.png")%>
 
-              <% elsif @pet.species == "cat" %>
-              <%= image_tag("cat.png")%>
+                  <% elsif @pet.species == "cat" %>
+                  <%= image_tag("cat.png")%>
 
-              <% elsif @pet.species == "piglet" %>
-              <%= image_tag("piglet.png")%>
+                  <% elsif @pet.species == "piglet" %>
+                  <%= image_tag("piglet.png")%>
 
-              <% elsif @pet.species == "rabbit" %>
-              <%= image_tag("rabbit.png")%>
+                  <% elsif @pet.species == "rabbit" %>
+                  <%= image_tag("rabbit.png")%>
+                </div>
+
+              </div>
+
       <% end %>
       <% end %>
 
