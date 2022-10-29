@@ -1,0 +1,48 @@
+
+<h2 class='section-headline'>My Bookings:</h2>
+<div class="container">
+
+    <div class="cards">
+
+      <% @bookings.each do |booking| %>
+        <div class="card-product">
+
+          <div class="card-image" >
+            <% if booking.pet.photo.key%>
+              <%= cl_image_tag booking.pet.photo.key, height: 300, width: 400, crop: :fill %>
+            <% else %>
+              <% if booking.pet.species == "dog" %>
+                  <%= image_tag("dog.png")%>
+
+              <% elsif booking.pet.species == "monkey" %>
+              <%= image_tag("monkey.png")%>
+
+              <% elsif booking.pet.species == "cat" %>
+              <%= image_tag("cat.png")%>
+
+              <% elsif booking.pet.species == "piglet" %>
+              <%= image_tag("piglet.png")%>
+
+              <% elsif booking.pet.species == "rabbit" %>
+              <%= image_tag("rabbit.png")%>
+
+              <% end %>
+            <% end %>
+          </div>
+
+          <div class="card-product-infos">
+            <p class="info-name"><%= booking.pet.name %></p>
+            <p><%= booking.pet.species.capitalize %></p>
+             <p>Personality: <%= booking.pet.category.capitalize %></p>
+            <p>Age: <%= booking.pet.age %></p>
+            <p>Age: <%= booking.pet.address %></p>
+            <p>Owner: <%= booking.pet.user.first_name || booking.pet.user.email %></p>
+ <p>Booked on: <%= booking.date %></p>
+ <%= link_to "Message", root_path, class: "btn btn-primary" %>
+          </div>
+
+        </div>
+      <% end %>
+
+    </div>
+</div>
