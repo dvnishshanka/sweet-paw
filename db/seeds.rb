@@ -24,7 +24,7 @@ users = User.pluck(:id)
     city: "Berlin",
     species: ["dog", "cat", "piglet", "monkey", "rabbit"].sample,
     age: ["1", "2", "3", "4", "9", "12", "16"].sample,
-    category: ["Sassy", "Innocent", "Funny", "Mischievous", "Grumpy", "Needy", "Mischievous"].sample,
+    category: ["Sassy", "Innocent", "Funny", "Grumpy", "Needy", "Mischievous"].sample,
     address: ["Rudi-Dutschke-Straße 26, 10969", "Danziger Str. 33, 10435",
        "Prinzenstraße 113-119, 10969", "Spandauer Damm 10-22, 14059",
        "Gleimstraße 55, 10437", "Kottbusser Damm 32, 10967", "Maybachufer 20, 12047",

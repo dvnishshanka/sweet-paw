@@ -25,16 +25,17 @@
 
   </div>
 </div>
-<div class="container">
+<div class="pet-image">
   <div class="row mt-4">
     <h3>Address: <%= @pet.address %></h3>
     <h3>Species: <%= @pet.species.capitalize %></h3>
     <h3>Age: <%= @pet.age %></h3>
+     </div>
+     <div class="pet-info">
     <h3>A little information about <%= @pet.name %> </h3><br><p><%= @pet.description %></p>
 
+          <%= link_to "Return to home", root_path, class: "btn-sign-up" %>
+          <%= link_to "Book this Pet", new_pet_booking_path(@pet), class: "btn-sign-up" %>
+      </div>
   </div>
-  <%= link_to "Return to home", root_path, class: "btn-sign-up" %>
-  <%= link_to "Book this Pet", new_pet_booking_path(@pet), class: "btn-sign-up" %>
-</div>
-
 </div>
