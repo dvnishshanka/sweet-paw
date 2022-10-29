@@ -35,7 +35,7 @@
             <p><%= booking.pet.species.capitalize %></p>
              <p>Personality: <%= booking.pet.category.capitalize %></p>
             <p>Age: <%= booking.pet.age %></p>
-            <p>Age: <%= booking.pet.address %></p>
+            <p>Address: <%= booking.pet.address %></p>
             <p>Owner: <%= booking.pet.user.first_name || booking.pet.user.email %></p>
  <p>Booked on: <%= booking.date %></p>
  <%= link_to "Message", root_path, class: "btn btn-primary" %>
