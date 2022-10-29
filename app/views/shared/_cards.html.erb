@@ -33,7 +33,8 @@
             <p class="info-name"><%= pet.name %></p>
             <p><%= pet.species.capitalize %></p>
              <p>Personality: <%= pet.category.capitalize %></p>
-            <p>age: <%= pet.age %></p>
+            <p>Age: <%= pet.age %></p>
+            <p>Owner: <%= pet.user.first_name || pet.user.email %></p>
             <p><%= link_to 'Learn More', pet_path(pet), class:"mb-3" %></p>
           </div>
 
