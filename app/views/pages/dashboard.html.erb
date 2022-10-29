@@ -3,7 +3,17 @@
 <h2>Welcome back <%= current_user.first_name %></h2>
 <h2>My Bookings</h2>
 
+
+
+
+<strong>Date: <%= @bookings.first.date %></strong>
+<h3>Postcode: <%= @bookings.first.pet.name %></h3>
+
+<h3>Postcode: <%= @bookings.first.pet.postcode %></h3>
+    <h3>Species: <%= @bookings.first.pet.species.capitalize %></h3>
+    <h3>Age: <%= @bookings.first.pet.age %></h3>
+
+
 <h2>My Pets</h2>
-<%= render 'shared/cards' %>
 
 </div>

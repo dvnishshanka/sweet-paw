@@ -2,7 +2,6 @@ class PetsController < ApplicationController
   skip_before_action :authenticate_user!
   before_action :set_pet, only: %i[show]
 
-
   def new
     @pet = Pet.new
   end
