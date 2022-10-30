@@ -9,7 +9,7 @@
 
           <div class="card-image" >
             <% if booking.pet.photo.key%>
-              <%= cl_image_tag booking.pet.photo.key, height: 300, width: 400, crop: :fill %>
+              <%= cl_image_tag booking.pet.photo.key, height: 500, width: 400, crop: :fill %>
             <% else %>
               <% if booking.pet.species == "dog" %>
                   <%= image_tag("dog.png")%>
@@ -43,6 +43,6 @@
 
         </div>
       <% end %>
-
+</div>
     </div>
 </div>

@@ -8,7 +8,7 @@
 
           <div class="card-image" >
             <% if pet.photo.key%>
-              <%= cl_image_tag pet.photo.key, height: 300, width: 400, crop: :fill %>
+              <%= cl_image_tag pet.photo.key, crop: "fill" %>
             <% else %>
               <% if pet.species == "dog" %>
                   <%= image_tag("dog.png")%>
@@ -40,14 +40,8 @@
 
           </div>
 
+
         </div>
       <% end %>
 
     </div>
-
-
-  <div class="container-btn-create d-flex">
-    <div class="box">
-      <%= link_to "Create a new pet", new_pet_path, class: "btn-create-new" %>
-    </div>
-  </div>
