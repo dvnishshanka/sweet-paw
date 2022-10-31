@@ -1,4 +1,4 @@
-<div class="container" style="width:50%; color:black; background-color: rgb(238 235 238); padding:20px; margin-bottom: 20px;">
+<div class="container mb-4 mt-0 p-5" style="background-color: white; color: black; width: 800px; ">
   <%= simple_form_for(@pet) do |f| %>
     <%= f.input :name %>
     <%= f.input :age %>
@@ -8,7 +8,9 @@
     <%= f.input :address %>
     <%= f.input :city %>
     <%= f.input :photo, as: :file %>
-    <%= f.submit %>
+      <div class="form-actions">
+    <%= f.button :submit, "Add Pet", class:"btn-login " %>
+  </div>
   <% end %>
 
 </div>

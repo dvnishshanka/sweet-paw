@@ -35,3 +35,20 @@
   background-color: $black;
   opacity: 1;
 }
+
+.btn-login {
+  padding: 3px 10px;
+  color: white !important;
+  background-color: $black ;
+  text-align: center;
+  opacity: 0.8;
+margin-bottom: 3px;
+  text-decoration: none;
+  border-radius: 10px;
+  width: 100px;
+}
+
+.btn-login:hover{
+  background-color: $black;
+  opacity: 1;
+}
