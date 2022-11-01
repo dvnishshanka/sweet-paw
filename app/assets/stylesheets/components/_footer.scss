@@ -1,21 +1,21 @@
-$blue: #4FA095;
 
 .footer {
-  background: $blue;
+  background: $black;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 60px;
   padding: 0px 50px;
-  color: 4FA095(0,0,0,0.3);
+  color: rgba(255, 255, 255, 0.7);
   margin-top: auto;
+  margin-bottom: 0px;
 }
 .footer-links {
   display: flex;
   align-items: center;
 }
 .footer-links a {
-  color: black;
+  color: $white;
   opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
