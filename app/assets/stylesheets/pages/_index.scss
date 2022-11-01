@@ -1,3 +1,35 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "show";
+
+.container {
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parent {
+  background-color: none;
+}
+
+.child {
+  width: 80%;
+  height: 600px;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.map-sweet {
+  margin: 2.5rem;
+}
+
+.header-all-pets {
+  font-size: 36px;
+}
