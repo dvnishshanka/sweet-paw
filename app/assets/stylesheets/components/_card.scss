@@ -1,31 +1,31 @@
 .card-product {
   overflow: hidden;
-  height: 220px;
-  width:400px;
+  display: flex;
+  flex-direction: column;
+  width:300px;
   background: white;
   box-shadow: 5 5 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
   margin-bottom: 20px;
   margin-top: 25px;
-  border-radius: 30px;
+
 }
 
-.card-product img {
-  height: 100%;
+.card-image img {
+  height: 350px;
   width: 100%;
   object-fit: cover;
 }
 
 .card-image {
   height: 100%;
-  width: 60%;
+  width: 100%;
   object-fit: cover;
 }
 
 .card-product-infos {
+  flex-grow: 10;
   .info-name{
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     margin: 0;
   }
@@ -33,7 +33,8 @@
 }
 
 .card-product p {
-  font-size: 12px;
+  color: black;
+  font-size: 14px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -42,36 +43,7 @@
 
 .card-product .card-product-infos {
   padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 10px;
   margin-left: 0;
-}
-
-.btn-create-new {
-  background: #1D6349;
-  margin: 12px;
-  color: #ddd;
-  padding: 12px;
-  border-radius: 5px;
-  box-shadow: 5 5 15px rgba(0,0,0,0.2);
-}
-
-.container-btn-create {
-  padding: 22px;
-  margin-left: 687px;
-}
-
-.btn-create-new:hover {
-  color: #282828;
-  border-radius: 20px;
-}
-
-.btn-lern-more {
-  color: #ddd;
-  background-color: #1D6349;
-  padding: 6px;
-  border-radius: 10px;
-}
-
-.btn-lern-more:hover {
-  color: #282828;
-  border-radius: 1px;
 }
