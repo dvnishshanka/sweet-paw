@@ -9,7 +9,7 @@
 
           <div class="card-image" >
             <% if booking.pet.photo.key%>
-              <%= cl_image_tag booking.pet.photo.key, height: 300, width: 400, crop: :fill %>
+              <%= cl_image_tag booking.pet.photo.key, height: 500, width: 400, crop: :fill %>
             <% else %>
               <% if booking.pet.species == "dog" %>
                   <%= image_tag("dog.png")%>
@@ -24,7 +24,7 @@
               <%= image_tag("piglet.png")%>
 
               <% elsif booking.pet.species == "rabbit" %>
-              <%= image_tag("rabbit.png")%>
+              <%= image_tag("https://images.unsplash.com/photo-1591382386627-349b692688ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")%>
 
               <% end %>
             <% end %>
@@ -43,6 +43,6 @@
 
         </div>
       <% end %>
-
+</div>
     </div>
 </div>
