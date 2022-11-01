@@ -1,13 +1,13 @@
-<div class="container">
+<div class="container box-show">
 
 <div class="row mt-5">
-  <div class="new-wrapper">
+  <div class="new-wrapper-pet-show">
     <h1 style="text-align:center">Allow me to introduce you to <%= @pet.name %></h1>
        <% if @pet.photo.key%>
-              <%= cl_image_tag @pet.photo.key, height: 300, width: 400, crop: :fill %>
+              <%= cl_image_tag @pet.photo.key, height: 300, width: 400, c: :crop, g: :auto %>
             <% else %>
-              <div class="card-product">
-                <div class="card-image">
+              <div class="card-product-show ">
+                <div class="card-image-show">
                     <div class="card-product img">
                       <% if @pet.species == "dog" %>
                       <%= image_tag ("dog.png")%>
@@ -33,18 +33,18 @@
 
   </div>
 </div>
-<div class="pet-image">
-  <div class="row mt-4">
-    <h3>Address: <%= @pet.address %></h3>
-    <h3>Species: <%= @pet.species.capitalize %></h3>
-    <h3>Age: <%= @pet.age %></h3>
-     </div>
-     <div class="pet-info">
-    <h3>A little information about <%= @pet.name %> </h3><br><p><%= @pet.description %></p>
-
-          <%= link_to "Return to home", root_path, class: "btn-sign-up" %>
-          <%= link_to "Book this Pet", new_pet_booking_path(@pet), class: "btn-sign-up" %>
+  <div class="pet-image-show">
+    <div class="row mt-4">
+      <h3>Address: <%= @pet.address %></h3>
+      <h3>Species: <%= @pet.species.capitalize %></h3>
+      <h3>Age: <%= @pet.age %></h3>
       </div>
+      <div class="pet-info-show">
+      <h3>A little information about <%= @pet.name %> </h3><br><p><%= @pet.description %>🌈</p>
+
+            <%= link_to "Return to home", root_path, class: "btn-sign-up" %>
+            <%= link_to "Book this Pet", new_pet_booking_path(@pet), class: "btn-sign-up" %>
+        </div>
+    </div>
   </div>
-</div>
 </div>
