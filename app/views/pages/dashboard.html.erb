@@ -1,13 +1,25 @@
-<div class="cards-container-dashboard container">
-
-    <div class="cards-dashboard">
+<div class="p-5 m-0" style="color: black; background-color:#f3eded; width:100%;">
+  <div class="cards-dashboard">
     <br>
-<h3>Welcome <%= current_user.first_name %> !</h3>
-<hr>
+    <h4 >Welcome <%= current_user.first_name %> !</h4>
+    <hr>
 
-<%= render 'shared/bookmark' %>
+      <h5 class="p-0">My Bookings: </h5>
+      <%= render 'shared/bookmark' %>
 
-<% if @pets.length >0 %>
-<%= render 'shared/cards' %>
-<% end %>
+      <hr>
+
+      <h5>My Pets:
+      <%= link_to new_pet_path do%>
+  <button class="btn-sign-up float-end"><i class="fa-solid fa-circle-plus "></i> Add pet</button>
+      <% end %>
+      </h5>
+
+      <% if @pets.length >0 %>
+        <%= render 'shared/my_pet_card' %>
+        <% else %>
+        <h6>You have not added any pets.</h6>
+      <% end %>
+
+  </div>
 </div>

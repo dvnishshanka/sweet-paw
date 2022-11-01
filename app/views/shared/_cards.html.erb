@@ -1,7 +1,7 @@
 
     <div class="cards container">
       <% @pets.each do |pet| %>
-        <div class="card-product">
+        <div class="card-product shadow">
           <div class="card-image" >
            <%= link_to  pet_path(pet) do%>
             <% if pet.photo.key%>
