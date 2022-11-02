@@ -30,6 +30,14 @@
           <div class="card-product-infos">
           <%= link_to  pet_path(pet) do%>
             <p class="info-name"><%= pet.name %></p>
+<<<<<<< HEAD
+            <p><%= pet.species.capitalize %></p>
+             <p>Personality: <%= pet.category.capitalize %></p>
+
+            <p>Age: <%= pet.age %></p>
+            <p>Owner: <%= pet.user.first_name || pet.user.email %></p>
+            <p><%= link_to 'Learn More', pet_path(pet), class:"mb-3 link-learn-more" %></p>
+=======
               <% end %>
              <p> <%= pet.category.capitalize %> <%= pet.species.capitalize %></p>
             <div class="d-flex justify-content-between align-items-center" >
@@ -39,6 +47,7 @@
             <% end %>
             </p>
             </div>
+>>>>>>> e8e2064b2383135eb61e9cb188ee40f81a8118eb
 
           </div>
 

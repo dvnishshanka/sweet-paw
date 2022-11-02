@@ -45,3 +45,19 @@ border-color:#e2b46f;
   }
   margin-top: 2.5rem;
 }
+
+.btn-search {
+  color: white !important;
+  background-color: $black ;
+  padding: 3px 10px;
+  border-radius: 10px;
+  margin-bottom: 3px;
+  opacity: 0.8;
+    width: 200px;
+    height: 40px;
+}
+
+.btn-search:hover{
+  background-color: $black;
+  opacity: 1;
+}
