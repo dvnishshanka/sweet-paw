@@ -2,13 +2,12 @@
 .section-headline {
   display: flex;
   height: fit-content;
-  color: $white;
+  color: #225820;
   justify-content:center;
   font-weight: lighter;
   padding: 0.5rem;
-  margin-bottom: 1rem;
-  background: #225820;
-  background: radial-gradient(circle, rgb(33, 123, 81) 0%, rgb(27, 87, 69) 100%);
+  margin-bottom: 2.5rem;
+  background: radial-gradient(circle, rgb(255,255,255) 0%, rgb(255,255,255) 100%);
 }
 
 .cards {
@@ -16,6 +15,48 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+.link-learn-more {
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  padding: 7px 10px 7px;
+  color: #282828;
+  font-weight: bold;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-bottom: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.link-learn-more:after {
+  content: "";
+  background-color: yellow;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  color: #282828;
+  font-weight: bold;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.link-learn-more:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+
+
+
 
 /* MQ */
 @media screen and (max-width: 600px) {
