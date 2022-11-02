@@ -1,38 +1,36 @@
-<div class="container box-show">
+<div class="container box-show ">
+<h1 style="text-align:center">Allow me to introduce you to <%= @pet.name %></h1>
+  <div class="row mt-5 d-flex">
 
-<div class="row mt-5">
-  <div class="new-wrapper-pet-show">
-    <h1 style="text-align:center">Allow me to introduce you to <%= @pet.name %></h1>
-       <% if @pet.photo.key%>
-              <%= cl_image_tag @pet.photo.key, height: 300, width: 400, c: :crop, g: :auto %>
-            <% else %>
-              <div class="card-product-show ">
-                <div class="card-image-show">
+      <div class="new-wrapper-pet-show ">
+        <% if @pet.photo.key%>
+                <%= cl_image_tag @pet.photo.key, height: 300, width: 400, c: :crop, g: :auto %>
+              <% else %>
+                <div class="card-product-show ">
+                  <div class="card-image-show">
                     <div class="card-product img">
                       <% if @pet.species == "dog" %>
                       <%= image_tag ("dog.png")%>
+                      <% elsif @pet.species == "monkey" %>
+                      <%= image_tag("monkey.png")%>
+
+                      <% elsif @pet.species == "cat" %>
+                      <%= image_tag("cat.png")%>
+
+                      <% elsif @pet.species == "piglet" %>
+                      <%= image_tag("piglet.png")%>
+
+                      <% elsif @pet.species == "rabbit" %>
+                      <%= image_tag("rabbit.png")%>
+                       <% end %>
                     </div>
+                  </div>
 
-                  <% elsif @pet.species == "monkey" %>
-                  <%= image_tag("monkey.png")%>
-
-                  <% elsif @pet.species == "cat" %>
-                  <%= image_tag("cat.png")%>
-
-                  <% elsif @pet.species == "piglet" %>
-                  <%= image_tag("piglet.png")%>
-
-                  <% elsif @pet.species == "rabbit" %>
-                  <%= image_tag("rabbit.png")%>
                 </div>
 
-              </div>
+        <% end %>
+      </div>
 
-      <% end %>
-      <% end %>
-
-  </div>
-</div>
   <div class="pet-image-show">
     <div class="row mt-4">
       <h3>Address: <%= @pet.address %></h3>
@@ -49,4 +47,5 @@
         </div>
     </div>
   </div>
+</div>
 </div>
