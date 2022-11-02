@@ -2,7 +2,8 @@
 <div class="form-control">
         <h3>Would you like to make a date with <%= @pet.name %> ?</h3>
         <%= simple_form_for [@pet, @booking] do |f| %>
-          <%= f.input :date, required: false, input_html: {class: "datepicker"} %>
+          <%= f.input :start_date, required: false, input_html: {class: "datepicker"} %>
+           <%= f.input :end_date, required: false, input_html: {class: "datepicker"} %>
           <%= f.submit class: "btn btn-primary" %>
         <% end %>
         </div>

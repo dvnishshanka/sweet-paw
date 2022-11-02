@@ -37,7 +37,8 @@
             <p>Age: <%= booking.pet.age %></p>
             <p>Address: <%= booking.pet.address %></p>
             <p>Owner: <%= booking.pet.user.first_name || booking.pet.user.email %></p>
- <p>Booked on: <%= booking.date %></p>
+ <p>Booked from : <%= booking.start_date %>
+ To <%= booking.end_date %></p>
  <%= link_to "Message", root_path, class: "btn btn-primary" %>
           </div>
 
