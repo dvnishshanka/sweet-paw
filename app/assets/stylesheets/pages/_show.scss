@@ -1,11 +1,43 @@
-.card-product {
 
+.card-product-show {
+  overflow: hidden;
+  height: 220px;
+  width:400px;
+  background: white;
+  box-shadow: 5 5 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 25px;
+  border-radius: 30px;
 }
 
-.card-product img {
-
+.new-wrapper-pet-show img {
+  display: flex;
+  height: auto;
+  width: 65%;
+  border: 8px solid #282828;
+  margin: 2.5rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+  color: #225820;
 }
 
-.card-image {
+.card-image-show {
+  height: 100%;
+  width: 60%;
+  object-fit: cover;
+}
 
+
+.pet-info-show {
+  color: #225820;
+}
+.pet-image-show {
+  color: #225820;
+}
+
+.box-show {
+  background-color: white;
+  border-radius: 2.5px;
+  box-shadow: 5 5 15px rgba(0,0,0,0.2);
 }
