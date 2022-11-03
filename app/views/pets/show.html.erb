@@ -1,6 +1,6 @@
 <div class="container-show">
   <div class="flex-wrap">
-    <div class="show-image">
+    <div class="show-image animate__animated animate__rollIn animate__delay-.5s">
       <% if @pet.photo.key%>
                   <%= cl_image_tag @pet.photo.key, c: :crop, g: :auto %>
                 <% else %>
@@ -26,7 +26,7 @@
           <% end %>
     </div>
     <div>
-      <h3 class="show-image">Allow me to introduce you to <%= @pet.name %> </h3>
+      <h3 class="animate__animated animate__jackInTheBox animate__delay-.8s show-image">Allow me to introduce you to <%= @pet.name %> </h3>
     </div>
   </div>
 
@@ -34,7 +34,7 @@
 
 <div class="container-show">
   <div class="ul-container-show">
-    <div class="show-info-pet">
+    <div class="show-info-pet animate__animated animate__jackInTheBox animate__delay-.8s">
         <p>Address: <%= @pet.address %></p>
         <p>Species: <%= @pet.species.capitalize %> </p>
         <p>Age: <%= @pet.age %></p>
