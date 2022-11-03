@@ -5,7 +5,12 @@
     <hr>
 
       <h5 class="p-0">My Bookings: </h5>
-      <%= render 'shared/bookmark' %>
+
+       <% if @bookings.length >0 %>
+       <%= render 'shared/bookmark' %>
+        <% else %>
+        <h6>You don't have any bookings.</h6>
+      <% end %>
 
       <hr>
 

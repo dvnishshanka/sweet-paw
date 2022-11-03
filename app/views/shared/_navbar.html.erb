@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm  navbar-sweet-paw mt-0">
+<div class="navbar navbar-expand-sm  navbar-sweet-paw mt-0 sticky-top">
   <div class="container-fluid ">
     <%= link_to root_path, class: "navbar-brand" do %>
     <div class="d-flex flex-row align-items-center justify-content-center">
@@ -12,13 +12,16 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
+      <ul class="navbar-nav me-auto ">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", root_path, class: "nav-link" %>
+            <%= link_to "Home", root_path, class: "nav-link " %>
           </li>
           <li class="nav-item">
             <%= link_to  "All Pets", pets_path, class: "nav-link" %>
+          </li>
+           <li class="nav-item">
+            <%= link_to  "Add Pet", new_pet_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "Dashboard", dashboard_path(current_user), class: "nav-link" %>
