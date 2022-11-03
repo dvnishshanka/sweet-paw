@@ -1,28 +1,21 @@
 
 
-<div class="container parent flex-center">
-  <h1 class="header-all-pets">Find a Pet for you!</h1>
-  <div class="wrap child flex-center">
-    <div data-controller="map"
-            id="map"
-            class="map-sweet"
-            data-map-target="map"
-            data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-            data-map-markers-value="<%=  @markers.to_json %>"
-            style="width: 80%; height: 600px;">
-    </div>
-  </div>
+
+ <%= link_to map_path do%>
+  <button class="btn-login position-fixed" style=" Z-index: 2; bottom: 100px; right:700px;"><i class="fa-regular fa-map"></i> Map</button>
+      <% end %>
+
+<div class=" container">
+  <%= link_to new_pet_path do%>
+  <button class="btn-lg"><i class="fa-solid fa-circle-plus "></i> Add pet</button>
+      <% end %>
 </div>
 
 
 
-<div class="container">
-      <%= link_to new_pet_path do%>
-  <button class="btn-lg"><i class="fa-solid fa-circle-plus "></i> Add pet</button>
-      <% end %>
-
-  </div>
+   <%= render "shared/search" %>
   <%= render "shared/cards" %>
 
 
+</div>
 </div>

@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   # Bookings of current User
   # Pets of current user
   get "dashboard/:id", to: "pages#dashboard", as: :dashboard
+  get "map/", to: "pages#map", as: :map
 end
