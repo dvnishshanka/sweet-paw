@@ -33,7 +33,7 @@
               <% end %>
              <p> <%= pet.category.capitalize %> <%= pet.species.capitalize %></p>
             <div class="d-flex justify-content-between align-items-center" >
-            <p style="font-size: 15px; "> <i class="fa-solid fa-euro-sign"></i> 2,000</p>
+            <p style="font-size: 15px; "> <i class="fa-solid fa-euro-sign"></i> <%= pet.price %></p>
             <p  style="font-size: 13px; color: grey"> <%= link_to  new_pet_booking_path(pet) do%>
             <i class="fa-solid fa-heart ">  Book me</i>
             <% end %>
