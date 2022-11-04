@@ -34,7 +34,16 @@
   left: 0px;
 }
 
-
+.btn-green {
+  color:  white;
+  padding: 10px 20px;
+  background-color:  #225820;
+  border: 1px solid black;
+  opacity: 0.8;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+}
 
 
 
@@ -48,7 +57,7 @@
   font-size: 16px;
   font-weight: 200;
   letter-spacing: 1px;
-  padding: 13px 20px 13px;
+  padding: 30px 30px 30px;
   outline: 0;
   border: 1px solid black;
   cursor: pointer;

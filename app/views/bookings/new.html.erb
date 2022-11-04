@@ -1,3 +1,15 @@
-<div class="container  mb-4 mt-0 p-5" style="background-color: white; color: black; width: 800px; ">
-<%= render 'bookings/form', pet: @pet, booking: @booking %>
+<div class="container mb-4 mt-5 p-0" style="background-color: white; color: black; width: 900px; height: 450px;">
+    <div class= "d-flex justify-content-between p-0 m-0">
+        <div style = "background-image: url('<%= image_url "#{@pet.check_species(@pet.species)}" %>'); width: 400px; height:450px;  background-size: cover;">
+        </div>
+
+
+          <div class="mt-5" style="width: 600px;">
+            <div class="form-actions" >
+              <%= render 'bookings/form', pet: @pet, booking: @booking %>
+
+            </div>
+
+          </div>
+    </div>
 </div>
