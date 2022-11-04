@@ -6,6 +6,7 @@ class Pet < ApplicationRecord
   validates :species, presence: true
   validates :city, presence: true
   has_one_attached :photo
+  has_many :reviews, dependent: :destroy
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?

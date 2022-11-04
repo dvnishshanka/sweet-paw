@@ -44,10 +44,28 @@
   </div>
 </div>
 
+<div class="container" data-controller="insert-in-list">
+<h2><%= pluralize @pet.reviews.size, "review" %></h2>
+
+
+  <div data-insert-in-list-target="items">
+  <% if @pet.reviews.blank? %>
+    Be the first to leave a review for <%= @pet.name %>
+  <% else %>
+    <% @pet.reviews.each do |review| %>
+    <%= render "reviews/review", review: review %>
+    <% end %>
+  <% end %>
+  </div>
+
+<%= render 'reviews/form', pet: @pet, review: @review %>
+</div>
+
+
 
 
 
 <ul class="show-btn">
-      <li><%= link_to "Return to home", root_path, class: "btn-return" %></li>
+      <li><%= link_to "Back to all Pets", pets_path, class: "btn-return" %></li>
       <li><%= link_to "Book this Pet", new_pet_booking_path(@pet), class: "btn-book-pet" %></li>
 </ul>
