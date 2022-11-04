@@ -2,12 +2,22 @@
 
 
 <div class="container">
-<div class="form-control" style="background-color:white;border: none">
+  <div class="form-control" style="background-color:white;border: none">
         <h2>Book a date with <br><%= @pet.name %> ?</h2>
-        <%= simple_form_for [@pet, @booking], html: {style: "background-color: white; border: none"} do |f| %>
-          <%= f.input :start_date, required: false, input_html: {class: "datepicker"} %>
-           <%= f.input :end_date, required: false, input_html: {class: "datepicker"} %>
-          <%= f.submit class: "btn-green" %>
+        <%= form_with model:  [@pet, @booking], authenticity_token: true do |f| %>
+  <%= f.text_field :start_date, placeholder: 'Select a Date', label:false,
+    data: {
+      controller: "flatpickr",
+      flatpickr_date_format: "d-m-Y",
+      flatpickr_min_date: Time.zone.now #disables past dates
+    } %>
+     <%= f.text_field :end_date, placeholder: 'Select a Date', label:false,
+    data: {
+      controller: "flatpickr",
+      flatpickr_date_format: "d-m-Y",
+      flatpickr_min_date: Time.zone.now #disables past dates
+    } %>
+      <%= f.submit class: "btn-green" %>
         <% end %>
-        </div>
-      </div>
+    </div>
+  </div>
