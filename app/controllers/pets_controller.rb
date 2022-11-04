@@ -16,18 +16,26 @@ class PetsController < ApplicationController
   def index
     if params[:query].present?
       @pets = Pet.global_search(params[:query])
+
+    elsif params[:city].present?
+      if params[:species] == "All" || params[:species] == ""
+        sql_query = <<~SQL
+          pets.address ILIKE :city
+          OR pets.city ILIKE :city
+        SQL
+      else
+        sql_query = <<~SQL
+          pets.species ILIKE :species
+          AND pets.address ILIKE :city
+          OR pets.city ILIKE :city
+        SQL
+      end
+       @pets = Pet.where(sql_query, species: "%#{params[:species]}%", city: "%#{params[:city]}%")
     else
       @pets = Pet.all
     end
-    # only Pets with coordinates
-    @markers = @pets.geocoded.map do |pet|
-      {
-        lat: pet.latitude,
-        lng: pet.longitude,
-        info_window: render_to_string(partial: "shared/info_window", locals: { pet: pet}),
-        image_url: helpers.asset_url("green-paw.png")
-      }
-    end
+
+
   end
 
   def show
