@@ -16,4 +16,19 @@ class Pet < ApplicationRecord
   using: {
     tsearch: { prefix: true }
   }
+
+  def check_species(input)
+    case input
+    when "dog"
+      "dog.png"
+    when "cat"
+      "cat.png"
+    when "piglet"
+      "piglet.png"
+    when "monkey"
+      "monkey.png"
+    else
+      "rabbit.png"
+    end
+  end
 end
