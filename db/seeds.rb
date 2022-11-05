@@ -13,9 +13,9 @@ User.destroy_all
 
 puts "Here are some new sweet-pets"
 
-User.create(email: "sara@gmail.com", password: "123456")
-User.create(email: "andy@gmail.com", password: "123456")
-User.create(email: "vidu@gmail.com", password: "123456")
+User.create(first_name: "Andy", last_name: "Grant", email: "andy@gmail.com", password: "123456")
+User.create(first_name: "Sara", last_name: "Rizo", email: "sara@gmail.com", password: "123456")
+User.create(first_name: "Vidushani", last_name: "Nishshanka", email: "vidu@gmail.com", password: "123456")
 users = User.pluck(:id)
 
 20.times do
