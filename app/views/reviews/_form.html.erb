@@ -3,5 +3,5 @@
  action: "submit->insert-in-list#send"
  }) do |f|%>
   <%= f.input :content, as: :text %>
-  <%= f.button :submit %>
+  <%= f.submit class: "btn-green"%>
 <% end %>

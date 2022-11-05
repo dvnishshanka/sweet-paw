@@ -25,7 +25,7 @@ class Pet < ApplicationRecord
     when "cat"
       "cat.png"
     when "piglet"
-      "piglet.png"
+      "pig.png"
     when "monkey"
       "monkey.png"
     else
