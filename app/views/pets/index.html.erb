@@ -5,15 +5,15 @@
   <button class="btn-login position-fixed" style=" Z-index: 2; bottom: 100px; right:700px;"><i class="fa-regular fa-map"></i> Map</button>
       <% end %>
 
-<div class=" container d-flex flex-row justify-content-between">
+<div class=" container d-flex flex-row justify-content-end">
 <div>
   <%= link_to new_pet_path do%>
   <button class="btn-sign-up"><i class="fa-solid fa-circle-plus "></i> Add pet</button>
       <% end %>
       </div>
-<div class="flex-grow-1">
-       <%= render "shared/search" %>
-       </div>
+<%# <div class="flex-grow-1"> %>
+       <%# <%= render "shared/search" %>
+       <%# </div> %>
 </div>
 
 
