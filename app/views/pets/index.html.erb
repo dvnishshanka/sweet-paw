@@ -1,33 +1,25 @@
-
-
-
- <%= link_to map_path do%>
+<%= link_to map_path do%>
   <button class="btn-login position-fixed" style=" Z-index: 2; bottom: 100px; right:700px;"><i class="fa-regular fa-map"></i> Map</button>
-      <% end %>
+<% end %>
 
-<div class=" container d-flex flex-row justify-content-end">
-<div class="flex-grow-1 ms-5">
- <%= form_with url: pets_path, method: :get, class: "d-flex" do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control btn-search",
-            placeholder: "Find your pet" %> <%end %>
-            </div>
-<div>
-  <%= link_to new_pet_path do%>
-  <button class="btn-sign-up"><i class="fa-solid fa-circle-plus "></i> Add pet</button>
-      <% end %>
+<div data-controller="filter-pets">
+  <div class=" container d-flex flex-row justify-content-end align-items-center mt-3" style="margin-left: 100px;">
+    <div class="flex-grow-1">
+      <%# <%= render "shared/search"%>
+      <div>
+        <button class="filter-button selected" id="all" data-action="click->filter-pets#clearFilter" data-filter-pets-target="allPets">All</button>
+        <button class="filter-button" id="dog" data-action="click->filter-pets#filter" data-filter-pets-target="button">Dog</button>
+        <button class="filter-button" id="cat" data-action="click->filter-pets#filter" data-filter-pets-target="button">Cat</button>
+        <button class="filter-button" id="monkey" data-action="click->filter-pets#filter" data-filter-pets-target="button">Monkey</button>
+        <button class="filter-button" id="pig" data-action="click->filter-pets#filter" data-filter-pets-target="button">Pig</button>
+        <button class="filter-button" id="rabbit" data-action="click->filter-pets#filter" data-filter-pets-target="button">Rabbit</button>
       </div>
-<%# <div class="flex-grow-1"> %>
-       <%# <%= render "shared/search" %>
-       <%# </div> %>
-</div>
-
-
-
-
+    </div>
+    <div>
+      <%= link_to new_pet_path do %>
+        <button class="btn-sign-up"><i class="fa-solid fa-circle-plus "></i> Add pet</button>
+      <% end %>
+    </div>
+  </div>
   <%= render "shared/cards" %>
-
-
-</div>
 </div>

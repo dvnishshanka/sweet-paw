@@ -1,0 +1,20 @@
+.filter-button {
+  background-color: rgba(237, 235, 235, 0.7);
+  border: none;
+  box-shadow: none;
+  font-size: 1.3rem;
+  padding: 5px 10px;
+  &:hover {
+    background-color: rgba(#5499fd, 0.8);
+    color: white;
+  }
+}
+
+.selected {
+  color: white;
+  background-color: rgba(#5499fd, 1);
+}
+
+.hide {
+  display: none;
+}

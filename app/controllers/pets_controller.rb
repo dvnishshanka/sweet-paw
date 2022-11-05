@@ -14,28 +14,18 @@ class PetsController < ApplicationController
   end
 
   def index
-    if params[:query].present?
-      @pets = Pet.global_search(params[:query])
+    @pets = Pet.global_search(params[:query]) if params[:query].present?
+    @specific_pet = params[:species]
+    @specific_city = params[:city]
+    @less_than_price = params[:price].to_i
 
-    elsif params[:city].present?
-      if params[:species] == "All" || params[:species] == ""
-        sql_query = <<~SQL
-          pets.address ILIKE :city
-          OR pets.city ILIKE :city
-        SQL
-      else
-        sql_query = <<~SQL
-          pets.species ILIKE :species
-          AND pets.address ILIKE :city
-          OR pets.city ILIKE :city
-        SQL
-      end
-       @pets = Pet.where(sql_query, species: "%#{params[:species]}%", city: "%#{params[:city]}%")
-    else
+
+    # if (@specific_pet == "" || @specific_pet.nil?) && (@specific_city == "" || @specific_city.nil?) && (@less_than_price == "" || @less_than_price.nil?)
       @pets = Pet.all
-    end
-
-
+    # else
+    #   raise
+    #   @pets = Pet.where(species: @specific_pet).where(city: @specific_city).where("price < ?", @less_than_price)
+    # end
   end
 
   def show
