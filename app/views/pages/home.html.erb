@@ -12,11 +12,7 @@
 
       <div class="d-flex">
         <a class="btn-sign-up me-3" href="/users/sign_up">Sign Up</a>
-        <%= form_with url: pets_path, method: :get, class: "d-flex" do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control btn-search",
-            placeholder: "Find your pet" %> <%end %>
+
       </div>
     </div>
   </div>
