@@ -1,15 +1,17 @@
-<%= form_with url: pets_path, method: :get, class: "d-flex m-1 justify-content-between container w-50" do %>
+<%= form_with url: root_path, method: :get, action: "/", data: { controller: "filter", filter_target: "form"}, class: "d-flex m-1 justify-content-between container w-50" do  %>
   <%= select_tag "species", raw("<option>All</option><option>Dog</option><option>Cat</option><option>Pig</option><option>Monkey</option>"),
       prompt: 'Select Pet type',
-   class: "form-control"
+   class: "form-control",
+    data: {filter_target: "species", action: "click->filter#handleSpecies"}
   %>
   <br>
     <%= text_field_tag :city,
     params[:city],
     class: "form-control",
-    placeholder: "City/Address"
+    placeholder: "City/Address",
+    data: {filter_target: "city" , action: "input->filter#handleCity"}
   %>
-   <%= number_field_tag :price, params[:price], min: 1, max: 10000000, placeholder: "Max Price"
+   <%= number_field_tag :price, params[:price], min: 1, max: 10000000, placeholder: "Max Price", data: {filter_target: "price", action: "input->filter#handlePrice"}
   %>
-  <%= submit_tag "Search", class: "btn btn-primary b" %>
+  <%= submit_tag "Search", class: "btn btn-sign-up" , data: {action: "click->filter#send"}%>
 <% end %>

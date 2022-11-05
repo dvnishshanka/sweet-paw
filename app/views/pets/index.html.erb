@@ -5,18 +5,27 @@
   <button class="btn-login position-fixed" style=" Z-index: 2; bottom: 100px; right:700px;"><i class="fa-regular fa-map"></i> Map</button>
       <% end %>
 
-<div class=" container d-flex flex-row justify-content-between">
+<div class=" container d-flex flex-row justify-content-end align-items-center mt-3" style="margin-left: 100px;">
+ <div class="flex-grow-1">
+       <%= render "shared/search"%>
+
+
+       <%= form_with url: pets_path, method: :get, class: "d-flex ms-5" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control btn-search",
+            placeholder: "Search your pet" %> <%end %>
+</div>
+
+
 <div>
   <%= link_to new_pet_path do%>
   <button class="btn-sign-up"><i class="fa-solid fa-circle-plus "></i> Add pet</button>
       <% end %>
       </div>
-<div class="flex-grow-1">
-       <%= render "shared/search" %>
-       </div>
+
+
 </div>
-
-
 
 
   <%= render "shared/cards" %>
