@@ -1,5 +1,4 @@
 .image-holder {
-
   width: 40vw;
   height: 53vh;
   background-size: cover;
@@ -14,4 +13,15 @@
 
  background-color: #225820;
  color: white;
+}
+
+.img-booking {
+  border: 10px solid #282828;
+  z-index: 289;
+  width: 500px;
+  height: 500px;
+}
+
+.form-frame {
+  position: relative;
 }

@@ -1,5 +1,6 @@
-<div class="container mb-4 mt-5 p-0" style="background-color: white; color: black; width: 1000px; height: 500px;">
-    <div class= "d-flex justify-content-between p-0 m-0">
+<div class="container mb-4 mt-5 p-0" style="background-color: white; color: black; width: 1000px; height: 500px;z-index: 100;">
+    <div class="d-flex justify-content-between p-0 m-0" style="background-color: white;
+">
         <% if @pet.photo.key%>
                   <%= cl_image_tag @pet.photo.key, :height=>500, :width=>500, :fill=>"fill" %>
                 <% else %>
@@ -24,12 +25,25 @@
 
           <% end %>
 
-          <div class="mt-5" style="width: 600px;">
-            <div class="form-actions" >
-              <%= render 'bookings/form', pet: @pet, booking: @booking %>
+      <div class="mt-5" style="width: 600px;">
+        <div class="form-actions" >
+          <%= render 'bookings/form', pet: @pet, booking: @booking %>
+        </div>
+     </div>
 
-            </div>
-
-          </div>
     </div>
+
+    <div class="" style="
+    z-index: -2;
+    top: -104px;
+    position: relative;
+    left: 853px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: self-end;">
+      <div class="img-booking"  style="border: none;">
+        <%= image_tag "huella.png", height: 300, class: "animal", style: "border: none;" %>
+      </div>
+    </div>
+
 </div>
