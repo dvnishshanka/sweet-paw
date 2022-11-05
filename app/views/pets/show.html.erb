@@ -1,8 +1,8 @@
 <div class="container-show">
   <div class="flex-wrap">
-    <div class="show-image animate__animated animate__rollIn animate__delay-.5s">
+    <div class="img-fluid show-image animate__animated animate__rollIn animate__delay-.5s">
       <% if @pet.photo.key%>
-                  <%= cl_image_tag @pet.photo.key, c: :crop, g: :auto %>
+                  <%= cl_image_tag @pet.photo.key, :height=>500, :width=>500, :fill=>"fill" %>
                 <% else %>
                   <div class="card-product-show">
                     <div class="card-image-show">
