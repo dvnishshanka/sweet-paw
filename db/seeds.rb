@@ -13,12 +13,12 @@ User.destroy_all
 
 puts "Here are some new sweet-pets"
 
-User.create(email: "sara@gmail.com", password: "123456")
-User.create(email: "andy@gmail.com", password: "123456")
-User.create(email: "vidu@gmail.com", password: "123456")
+User.create(first_name: "Andy", last_name: "Grant", email: "andy@gmail.com", password: "123456")
+User.create(first_name: "Sara", last_name: "Rizo", email: "sara@gmail.com", password: "123456")
+User.create(first_name: "Vidushani", last_name: "Nishshanka", email: "vidu@gmail.com", password: "123456")
 users = User.pluck(:id)
 
-20.times do
+10.times do
   Pet.create(
     name: Faker::FunnyName.two_word_name,
     city: "Berlin",
@@ -30,7 +30,7 @@ users = User.pluck(:id)
        "Gleimstraße 55, 10437", "Kottbusser Damm 32, 10967", "Maybachufer 20, 12047",
       "Dunckerstraße 80A, 10437", "Sophienstraße 21, 10178", "Warschauer Str. 74, 10243"].sample,
     description: "lovely pet, very friendly loves to be outside
-    needs alot of treats, very comfortable around people but maybe avoid small children",
+    needs alot of treats.",
     price: rand(100..1000),
     user_id: users.sample
   )

@@ -1,7 +1,15 @@
 
-<div style='float:left'><img src='http://i.stack.imgur.com/g672i.png'></div><div style='float:right; padding: 10px;'>
+<div style='float:left'>
+<%= image_tag pet.check_species(pet.species), height: 60, width: 60 %>
 
-  <p><%= pet.name %></p>
+
+
+
+
+
+
+
+  <p><strong><i class="fa-solid fa-paw"></i> <%= pet.name %></strong></p>
   <p><%= pet.address %></p>
-  <%= link_to "more info", pet_path(pet), class: "btn-sign-up" %>
+  <%= link_to "More info", pet_path(pet), class: "btn-map" %>
 </div>
