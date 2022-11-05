@@ -6,6 +6,13 @@
       <% end %>
 
 <div class=" container d-flex flex-row justify-content-end">
+<div class="flex-grow-1 ms-5">
+ <%= form_with url: pets_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control btn-search",
+            placeholder: "Find your pet" %> <%end %>
+            </div>
 <div>
   <%= link_to new_pet_path do%>
   <button class="btn-sign-up"><i class="fa-solid fa-circle-plus "></i> Add pet</button>

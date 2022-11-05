@@ -34,11 +34,11 @@
     <div class="show-image">
       <h3 class="animate__animated animate__jackInTheBox animate__delay-.8s ">Allow me to introduce you to <%= @pet.name %> </h3>
         <p><%= @pet.category.capitalize %> <%= @pet.species %> </p>
-        <p><%= @pet.name %> is <%= @pet.age %> years old</p>
-       <p>Address: <%= @pet.address %></p>
+        <p><%= @pet.name %> is <%= @pet.age %> years old.</p>
+       <p><i class="fa-solid fa-location-dot">  </i> <%= @pet.address %></p>
+<br>
 
-
-        <p>A little information about <%= @pet.name %> </p>
+        <p style="font-weight: 400;"><strong>A little information about <%= @pet.name %> </strong> </p>
         <p><%= @pet.description %>🌈</p>
     </div>
   </div>
