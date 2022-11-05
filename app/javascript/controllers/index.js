@@ -4,6 +4,12 @@
 
 import { application } from "./application"
 
+import FilterController from "./filter_controller"
+application.register("filter", FilterController)
+
+import FilterPetsController from "./filter_pets_controller"
+application.register("filter-pets", FilterPetsController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
