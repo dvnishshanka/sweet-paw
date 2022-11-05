@@ -1,4 +1,10 @@
+<div class="d-flex justify-content-between">
+      <div><%= link_to "Back to all Pets", pets_path, class: "btn-return m-5" %></div>
+      <div><%= link_to "Book this Pet", new_pet_booking_path(@pet), class: "btn-book-pet m-5" %></div>
+</div>
+
 <div class="container-show">
+
   <div class="flex-wrap">
     <div class="img-fluid show-image animate__animated animate__rollIn animate__delay-.5s">
       <% if @pet.photo.key%>
@@ -25,31 +31,24 @@
 
           <% end %>
     </div>
-    <div>
-      <h3 class="animate__animated animate__jackInTheBox animate__delay-.8s show-image">Allow me to introduce you to <%= @pet.name %> </h3>
-    </div>
-  </div>
-
-</div>
-
+    <div class="show-image">
+      <h3 class="animate__animated animate__jackInTheBox animate__delay-.8s ">Allow me to introduce you to <%= @pet.name %> </h3>
+        <p><%= @pet.category.capitalize %> <%= @pet.species %> </p>
+        <p><%= @pet.name %> is <%= @pet.age %> years old</p>
+       <p>Address: <%= @pet.address %></p>
 
 
-<div class="container-show">
-  <div class="ul-container-show">
-    <div class="show-info-pet animate__animated animate__jackInTheBox animate__delay-.8s">
-        <p>Address: <%= @pet.address %></p>
-        <p>Species: <%= @pet.species.capitalize %> </p>
-        <p>Age: <%= @pet.age %></p>
         <p>A little information about <%= @pet.name %> </p>
         <p><%= @pet.description %>🌈</p>
     </div>
   </div>
+
 </div>
 
 
 
-<div class="container-show">
-  <div class="flex-wrap">
+<div class="container">
+
     <div class="show-info-pet animate__animated animate__jackInTheBox animate__delay-.8s">
 <div class="container" data-controller="insert-in-list">
 <h2><%= pluralize @pet.reviews.size, "review" %></h2>
@@ -67,15 +66,6 @@
 
 <%= render 'reviews/form', pet: @pet, review: @review %>
 </div>
-  </div>
+
   </div>
 </div>
-
-
-
-
-
-<ul class="show-btn">
-      <li><%= link_to "Back to all Pets", pets_path, class: "btn-return" %></li>
-      <li><%= link_to "Book this Pet", new_pet_booking_path(@pet), class: "btn-book-pet" %></li>
-</ul>
