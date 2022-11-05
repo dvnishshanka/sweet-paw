@@ -1,8 +1,28 @@
-<div class="container mb-4 mt-5 p-0" style="background-color: white; color: black; width: 900px; height: 450px;">
+<div class="container mb-4 mt-5 p-0" style="background-color: white; color: black; width: 1000px; height: 525px;">
     <div class= "d-flex justify-content-between p-0 m-0">
-        <div style = "background-image: url('<%= image_url "#{@pet.check_species(@pet.species)}" %>'); width: 400px; height:450px;  background-size: cover;">
-        </div>
+        <% if @pet.photo.key%>
+                  <%= cl_image_tag @pet.photo.key, c: :crop, g: :auto %>
+                <% else %>
+                  <div class="card-product-show">
+                    <div class="card-image-show">
+                      <div class="card-product img">
+                        <% if @pet.species == "dog" %>
+                        <%= image_tag ("dog.png")%>
+                        <% elsif @pet.species == "monkey" %>
+                        <%= image_tag("monkey.png")%>
+                        <% elsif @pet.species == "cat" %>
+                        <%= image_tag("cat.png")%>
+                        <% elsif @pet.species == "piglet" %>
+                        <%= image_tag("piglet.png")%>
+                        <% elsif @pet.species == "rabbit" %>
+                        <%= image_tag("rabbit.png")%>
+                        <% end %>
+                      </div>
+                    </div>
 
+                  </div>
+
+          <% end %>
 
           <div class="mt-5" style="width: 600px;">
             <div class="form-actions" >
