@@ -30,7 +30,7 @@ users = User.pluck(:id)
        "Gleimstraße 55, 10437", "Kottbusser Damm 32, 10967", "Maybachufer 20, 12047",
       "Dunckerstraße 80A, 10437", "Sophienstraße 21, 10178", "Warschauer Str. 74, 10243"].sample,
     description: "lovely pet, very friendly loves to be outside
-    needs alot of treats, very comfortable around people but maybe avoid small children",
+    needs alot of treats.",
     price: rand(100..1000),
     user_id: users.sample
   )
