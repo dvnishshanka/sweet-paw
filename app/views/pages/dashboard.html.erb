@@ -3,28 +3,24 @@
     <br>
     <h4 >Welcome back <%= current_user.first_name.capitalize %> !</h4>
     <hr>
-
-      <h5 class="p-0">My Bookings: </h5>
-
-       <% if @bookings.length >0 %>
-       <%= render 'shared/bookmark' %>
-        <% else %>
+    <h5 class="p-0">My Bookings: </h5>
+      <% if @bookings.length >0 %>
+        <%= render 'shared/bookmark' %>
+      <% else %>
         <h6>You don't have any bookings.</h6>
-      <% end %>
+    <% end %>
+    <hr>
 
-      <hr>
-
-      <h5>My Pets:
+    <h5>My Pets:
       <%= link_to new_pet_path do%>
-  <button class="btn-sign-up float-end"><i class="fa-solid fa-circle-plus "></i> Add pet</button>
+        <button class="btn-sign-up float-end"><i class="fa-solid fa-circle-plus "></i> Add pet</button>
       <% end %>
-      </h5>
+    </h5>
 
-      <% if @pets.length >0 %>
-        <%= render 'shared/my_pet_card' %>
-        <% else %>
-        <h6>You have not added any pets.</h6>
-      <% end %>
-
+    <% if @pets.length >0 %>
+      <%= render 'shared/my_pet_card' %>
+    <% else %>
+      <h6>You have not added any pets.</h6>
+    <% end %>
   </div>
 </div>

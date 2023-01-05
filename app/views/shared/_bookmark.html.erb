@@ -1,49 +1,40 @@
-
-
 <div class="container">
+  <div class="cards ">
+    <% @bookings.each do |booking| %>
+      <div class="img-fluid card-product d-flex flex-row shadow" style="width: 700px; ">
+        <div class="img-fluid card-image" style="width: 400px; height: 300px;" >
+          <% if booking.pet.photo.key%>
+            <%= cl_image_tag booking.pet.photo.key, :height=>500, :width=>500, :fill=>"fill" %>
+          <% else %>
+            <% if booking.pet.species == "dog" %>
+              <%= image_tag("https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80")%>
 
-    <div class="cards ">
-
-      <% @bookings.each do |booking| %>
-        <div class="img-fluid card-product d-flex flex-row shadow" style="width: 700px; ">
-
-          <div class="img-fluid card-image" style="width: 400px; height: 300px;" >
-            <% if booking.pet.photo.key%>
-              <%= cl_image_tag booking.pet.photo.key, :height=>500, :width=>500, :fill=>"fill" %>
-            <% else %>
-              <% if booking.pet.species == "dog" %>
-                  <%= image_tag("https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80")%>
-
-              <% elsif booking.pet.species == "monkey" %>
+            <% elsif booking.pet.species == "monkey" %>
               <%= image_tag("https://images.unsplash.com/photo-1516636052745-e142aecffd0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80")%>
 
-              <% elsif booking.pet.species == "cat" %>
+            <% elsif booking.pet.species == "cat" %>
               <%= image_tag("https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")%>
 
-              <% elsif booking.pet.species == "piglet" %>
+            <% elsif booking.pet.species == "piglet" %>
               <%= image_tag("https://images.unsplash.com/photo-1617167152074-821b4f8af3d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")%>
 
-              <% elsif booking.pet.species == "rabbit" %>
+            <% elsif booking.pet.species == "rabbit" %>
               <%= image_tag("https://images.unsplash.com/photo-1591382386627-349b692688ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")%>
 
-              <% end %>
             <% end %>
-          </div>
-
-          <div class="card-product-infos pt-3">
-            <p class="info-name"><%= booking.pet.name %></p>
-             <p> <%= booking.pet.category.capitalize %> <%= booking.pet.species.capitalize %></p>
-
-            <p><i class="fa-solid fa-location-dot"></i> <%= booking.pet.address %></p>
-            <p><i class="fa-regular fa-user"></i> <%= booking.pet.user.first_name || booking.pet.user.email %></p>
- <p><i class="fa-regular fa-calendar-days"></i> <%= booking.start_date %>
- to <%= booking.end_date %></p>
- <br>
- <%# <%= link_to "Message", root_path, class: "btn-sign-up" %>
-          </div>
-
+          <% end %>
         </div>
-      <% end %>
-</div>
-    </div>
+
+        <div class="card-product-infos pt-3">
+          <p class="info-name"><%= booking.pet.name %></p>
+          <p> <%= booking.pet.category.capitalize %> <%= booking.pet.species.capitalize %></p>
+          <p><i class="fa-solid fa-location-dot"></i> <%= booking.pet.address %></p>
+          <p><i class="fa-regular fa-user"></i> <%= booking.pet.user.first_name || booking.pet.user.email %></p>
+          <p><i class="fa-regular fa-calendar-days"></i> <%= booking.start_date %>to <%= booking.end_date %></p>
+          <br>
+          <%# <%= link_to "Message", root_path, class: "btn-sign-up" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

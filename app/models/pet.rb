@@ -13,10 +13,10 @@ class Pet < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :global_search,
-  against: [ :name, :species, :category, :address, :city ],
-  using: {
-    tsearch: { prefix: true }
-  }
+                  against: %i[name species category address city],
+                  using: {
+                    tsearch: { prefix: true }
+                  }
 
   def check_species(input)
     case input

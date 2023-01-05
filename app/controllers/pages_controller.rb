@@ -17,7 +17,7 @@ class PagesController < ApplicationController
       {
         lat: pet.latitude,
         lng: pet.longitude,
-        info_window: render_to_string(partial: "shared/info_window", locals: { pet: pet}),
+        info_window: render_to_string(partial: "shared/info_window", locals: { pet: }),
         image_url: helpers.asset_url("green-paw.png")
       }
     end

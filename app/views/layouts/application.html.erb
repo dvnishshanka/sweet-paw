@@ -27,11 +27,10 @@
   </head>
 
   <body class="pt-1" style="min-height:100vh; display:flex; flex-direction: column; background-color:#ffe01b; color:white; ">
-
-      <%= render "shared/navbar" %>
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+    <%= render "shared/navbar" %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
-     <%= render "shared/footer" %>
+    <%= render "shared/footer" %>
   </body>
 </html>
