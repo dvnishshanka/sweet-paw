@@ -1,14 +1,6 @@
 
 <div style='float:left'>
-<%= image_tag pet.check_species(pet.species), height: 60, width: 60 %>
-
-
-
-
-
-
-
-
+  <%= image_tag pet.check_species(pet.species), height: 60, width: 60 %>
   <p><strong><i class="fa-solid fa-paw"></i> <%= pet.name %></strong></p>
   <p><%= pet.address %></p>
   <%= link_to "More info", pet_path(pet), class: "btn-map" %>

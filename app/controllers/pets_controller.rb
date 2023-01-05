@@ -19,9 +19,8 @@ class PetsController < ApplicationController
     @specific_city = params[:city]
     @less_than_price = params[:price].to_i
 
-
     # if (@specific_pet == "" || @specific_pet.nil?) && (@specific_city == "" || @specific_city.nil?) && (@less_than_price == "" || @less_than_price.nil?)
-      @pets = Pet.all
+    @pets = Pet.all
     # else
     #   raise
     #   @pets = Pet.where(species: @specific_pet).where(city: @specific_city).where("price < ?", @less_than_price)

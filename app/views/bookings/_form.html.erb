@@ -1,22 +1,22 @@
 <div class="container">
   <div class="form-control" style="background-color:white;border: none">
-        <h2>Book a date with <br><%= @pet.name %> ?</h2>
-        <%= form_with model:  [@pet, @booking], authenticity_token: true do |f| %>
-  <%= f.text_field :start_date, placeholder: 'Start Date', label:false,
-    data: {
-      controller: "flatpickr",
-      flatpickr_date_format: "d-m-Y",
-      flatpickr_min_date: Time.zone.now #disables past dates
-    } %>
-     <%= f.text_field :end_date, placeholder: 'End Date', label:false,
-    data: {
-      controller: "flatpickr",
-      flatpickr_date_format: "d-m-Y",
-      flatpickr_min_date: Time.zone.now #disables past dates
-    } %>
+    <h2>Book a date with <br><%= @pet.name %> ?</h2>
+    <%= form_with model:  [@pet, @booking], authenticity_token: true do |f| %>
+    <%= f.text_field :start_date, placeholder: 'Start Date', label:false,
+      data: {
+        controller: "flatpickr",
+        flatpickr_date_format: "d-m-Y",
+        flatpickr_min_date: Time.zone.now #disables past dates
+      } %>
+      <%= f.text_field :end_date, placeholder: 'End Date', label:false,
+      data: {
+        controller: "flatpickr",
+        flatpickr_date_format: "d-m-Y",
+        flatpickr_min_date: Time.zone.now #disables past dates
+      } %>
       <div class="container d-flex justify-content-end">
         <%= f.submit class: "btn-green" %>
       </div>
-        <% end %>
-    </div>
+    <% end %>
   </div>
+</div>

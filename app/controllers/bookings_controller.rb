@@ -1,7 +1,6 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show]
-  before_action :set_pet, only: [:new, :create]
-
+  before_action :set_pet, only: %i[new create]
 
   def index
     @bookings = current_user.bookings

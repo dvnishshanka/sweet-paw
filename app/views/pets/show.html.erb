@@ -1,72 +1,60 @@
 <div class="d-flex justify-content-between">
-      <div><%= link_to "Back to all Pets", pets_path, class: "btn-return m-5" %></div>
-      <div><%= link_to "Book this Pet", new_pet_booking_path(@pet), class: "btn-book-pet m-5" %></div>
+  <div><%= link_to "Back to all Pets", pets_path, class: "btn-return m-5" %></div>
+  <div><%= link_to "Book this Pet", new_pet_booking_path(@pet), class: "btn-book-pet m-5" %></div>
 </div>
 
 <div class="container-show">
-
   <div class="flex-wrap">
     <div class="img-fluid show-image animate__animated animate__rollIn animate__delay-.5s">
       <% if @pet.photo.key%>
-                  <%= cl_image_tag @pet.photo.key, :height=>500, :width=>500, :fill=>"fill" %>
-                <% else %>
-                  <div class="card-product-show">
-                    <div class="card-image-show">
-                      <div class="card-product img">
-                        <% if @pet.species == "dog" %>
-                        <%= image_tag ("https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80")%>
-                        <% elsif @pet.species == "monkey" %>
-                        <%= image_tag("https://images.unsplash.com/photo-1516636052745-e142aecffd0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80")%>
-                        <% elsif @pet.species == "cat" %>
-                        <%= image_tag("https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")%>
-                        <% elsif @pet.species == "piglet" %>
-                        <%= image_tag("https://images.unsplash.com/photo-1617167152074-821b4f8af3d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")%>
-                        <% elsif @pet.species == "rabbit" %>
-                        <%= image_tag("https://images.unsplash.com/photo-1591382386627-349b692688ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")%>
-                        <% end %>
-                      </div>
-                    </div>
-
-                  </div>
-
-          <% end %>
+        <%= cl_image_tag @pet.photo.key, :height=>500, :width=>500, :fill=>"fill" %>
+      <% else %>
+        <div class="card-product-show">
+          <div class="card-image-show">
+            <div class="card-product img">
+              <% if @pet.species == "dog" %>
+                <%= image_tag ("https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80")%>
+              <% elsif @pet.species == "monkey" %>
+                <%= image_tag("https://images.unsplash.com/photo-1516636052745-e142aecffd0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80")%>
+              <% elsif @pet.species == "cat" %>
+                <%= image_tag("https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")%>
+              <% elsif @pet.species == "piglet" %>
+                <%= image_tag("https://images.unsplash.com/photo-1617167152074-821b4f8af3d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")%>
+              <% elsif @pet.species == "rabbit" %>
+                <%= image_tag("https://images.unsplash.com/photo-1591382386627-349b692688ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")%>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
     <div class="show-image">
       <h3 class="animate__animated animate__jackInTheBox animate__delay-.8s ">Allow me to introduce you to <%= @pet.name %> </h3>
-        <p><%= @pet.category.capitalize %> <%= @pet.species %> </p>
-        <p><%= @pet.name %> is <%= @pet.age %> years old.</p>
-       <p><i class="fa-solid fa-location-dot">  </i> <%= @pet.address %></p>
-<br>
-
-        <p style="font-weight: 400;"><strong>A little information about <%= @pet.name %> </strong> </p>
-        <p><%= @pet.description %>🌈</p>
+      <p><%= @pet.category.capitalize %> <%= @pet.species %> </p>
+      <p><%= @pet.name %> is <%= @pet.age %> years old.</p>
+      <p><i class="fa-solid fa-location-dot">  </i> <%= @pet.address %></p>
+      <br>
+      <p style="font-weight: 400;"><strong>A little information about <%= @pet.name %> </strong> </p>
+      <p><%= @pet.description %>🌈</p>
     </div>
   </div>
-
 </div>
-
-
 
 <div class="container">
-
-    <div class="show-info-pet animate__animated animate__jackInTheBox animate__delay-.8s">
-<div class="container" data-controller="insert-in-list">
-<%# < <h2><%= pluralize @pet.reviews.size, "review"</h2> %>
-<h2> Leave a review here</h2>
-
-
-  <div data-insert-in-list-target="items">
-  <% if @pet.reviews.blank? %>
-    Be the first to leave a review for <%= @pet.name %>
-  <% else %>
-    <% @pet.reviews.each do |review| %>
-    <%= render "reviews/review", review: review %>
-    <% end %>
-  <% end %>
-  </div>
-
-<%= render 'reviews/form', pet: @pet, review: @review %>
-</div>
-
+  <div class="show-info-pet animate__animated animate__jackInTheBox animate__delay-.8s">
+    <div class="container" data-controller="insert-in-list">
+      <%# < <h2><%= pluralize @pet.reviews.size, "review"</h2> %>
+      <h2> Leave a review here</h2>
+      <div data-insert-in-list-target="items">
+        <% if @pet.reviews.blank? %>
+          Be the first to leave a review for <%= @pet.name %>
+        <% else %>
+          <% @pet.reviews.each do |review| %>
+            <%= render "reviews/review", review: review %>
+          <% end %>
+        <% end %>
+      </div>
+      <%= render 'reviews/form', pet: @pet, review: @review %>
+    </div>
   </div>
 </div>
