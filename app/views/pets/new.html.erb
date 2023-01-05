@@ -5,7 +5,8 @@
     <hr>
     <%= f.input :name %>
     <%= f.input :age %>
-    <%= f.input :species %>
+    <% f.label :species %>
+    <%= f.input :species, as: :select, collection: [['Dog' , 'dog'], ['Cat', 'cat'], ['Piglet', 'piglet'],['Squirrel', 'squirrel'], [ 'Rabbit', 'rabbit'], ['Monkey', 'monkey'], ['Fish','fish']], prompt: 'Select your pet' %>
     <%= f.input :category %>
     <%= f.input :description %>
     <%= f.input :price %>

@@ -3,7 +3,8 @@ class Pet < ApplicationRecord
   has_many :bookings
   validates :name, presence: true
   validates :address, presence: true
-  validates :species, presence: true
+  validates :species, presence: true, inclusion: { in: %w[dog cat piglet rabbit squirrel fish monkey],
+    allow_nil: false }
   validates :city, presence: true
   has_one_attached :photo
   has_many :reviews, dependent: :destroy
